@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reg Form</title>
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+            background-image: linear-gradient(to right, skyblue, violet);
+        }
+
+        #title {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 250px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 77px;
+            height: 27px;
+            position: relative;
+            left: 180px;
+        }
+
+        form {
+            text-align: center;
+            font-family: Calibri;
+            font-size: 20px;
+            border: 3px solid black;
+            width: 600px;
+            margin: 20px auto;
+        }
+        #OUTPUT-data {
+        
+            font-family: Calibri;
+            font-size: 20px;
+            border: 3px solid black;
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        td:last-child {
+            text-align: left;
+        }
+    </style>
+    <script>
+        function validate() {
+            var strText = document.getElementById("txtFName").value;
+            var strText1 = document.getElementById("txtLName").value;
+            var strText2 = document.getElementById("phoneno").value;
+            var strText3 = document.getElementById("txtEmail").value;
+            var submitteddata = "<b> first Name:</b>"+strText+"<br>"+"<b>last name:</b>"+strText1+"<br>"+"<b>phone no:</b>"+strText2+"<br>"+"<b>Email:</b>"+strText3+"<br>";
+
+document.getElementById("OUTPUT-data").innerHTML = submitteddata;
+document.getElementById("OUTPUT-data").style.display='block';
+           
+        }
+    </script>
+</head>
+
+<body>
+    <div> 
+    <form method="" action="" name="reg_form" >
+        <h2>Registration Form</h2>
+        <table>
+            <tr>
+                <td><label>First Name: </label></td>
+                <td>
+                    <input type="text" name="fname" placeholder="First Name" id="txtFName">
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label>Last Name: </label></td>
+                <td>
+                    <input type="text" name="lname" placeholder="Last Name" id="txtLName">
+                </td>
+            </tr>
+           
+            
+            <tr>
+                <td><label>Phone Number: </label></td>
+                <td>
+                    <input type="number" name="phone Number" id="phoneno">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email Id: </label></td>
+                <td>
+                    <input type="text" name="email" placeholder="example@gmail.com" id="txtEmail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button"  value="Submit" onclick="validate()" >
+                   
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<HR>
+<div id="OUTPUT-data" style="display: none;">
+    </div>
+</body>
+
+</html>
